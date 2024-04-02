@@ -21,13 +21,13 @@
         <script src="./assets/script/index.js"defer></script>
     </head>
     <body>
-        <div id="clock"></div>
-        <div id="alarm-set"></div> <!-- Placeholder for the alarm time -->
-        <form id="alarm-form">
-            <input type="number" id="alarm-hour" placeholder="HH" min="0" max="23" required>
-            <input type="number" id="alarm-minute" placeholder="MM" min="0" max="59" required>
-            <button type="submit">Set Alarm</button>
+        <div class="clock"><h1>00:00</h1></div>
+        <div class="alarm-set"></div> <!-- Placeholder for the alarm time -->
+        <form class="alarm-form">
+            <input type="number" class="alarm-hour" placeholder="HH" min="0" max="23" required>
+            <input type="number" class="alarm-minute" placeholder="MM" min="0" max="59" required>
+            <input type="button" class="set" value="Set alarm">
         </form>
-        <audio id="alarm-sound" src="sounds/alarm.mp3.mp3" preload="auto"></audio>
+        <audio id="alarm-sound" src="assets/sounds/alarm.mp3.mp3" preload="auto"></audio>
     </body>
 </html>
