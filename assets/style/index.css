@@ -9,69 +9,76 @@
     margin-inline: auto;
 }
 body {
-    font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
-    padding: 0 10px;
     margin: 0;
-    min-height: 100vh;
-    background-color: #262626;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    font-family: 'Arial', sans-serif;
+    color: white;
 }
-
 main {
     height: calc(100vh - 180px);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.clock {
-    width: 440px;
-    padding: 30px 30px 30px;
-    background: #262626;
-    border-radius: 10px;
-}
-.clock h1 {
-    font-size: 80px;
-    margin: 30px 0;
-    text-align: center;
-    margin-right: -885px;
-    color: #fff;
+#clock {
+    font-size: 100px;
+    margin-bottom: 15px; 
 }
 
-.alarm-form {
-    margin-top: 5px;
+#alarm-set {
+    font-size: 16px; /* Smaller font for the alarm set text */
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 15px;
+    margin-bottom: 30px; /* Space between alarm set display and form */
 }
 
-input[type=number] {
-    width: 65px;
-    height: 35px;
-    text-align: center;
-    padding: 0 14px;
-    border: 1px solid #ffffff0d;
-    background-color: #ffffff0d;
-    border-radius: 80px;
+#alarm-set i {
+    margin-right: 5px; /* Space between bell icon and text */
+}
+
+#alarm-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#alarm-form input {
+    background: none;
+    border: 2px solid #555;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 15px;
     font-size: 20px;
-    color: #fff;
+    width: 60px; /* Fixed width */
+    text-align: center;
 }
 
-input[type=button] {
-    width: 120px;
-    height: 35px;
-    text-align: center;
-    padding: 0 14px;
-    background-color: #008000;
-    border-radius: 80px;
+#alarm-form input::placeholder {
+    color: #aaa;
+}
+
+#alarm-form button {
+    background-color: #28a745;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    padding: 10px 20px;
     font-size: 20px;
-    color: #fff;
-    transition: all 0.25s ease-in-out;
-}
-input[type=button]:hover {
-    background-color: #4ee44e;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.setAlarm {
-    color: #fff; 
-    text-align: center;
-    margin-left: -10px;
- }
+#alarm-form button:hover {
+    background-color: #218838;
+}
+
+#alarm-form button:active {
+    background-color: #1e7e34;
+}
